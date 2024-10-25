@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-100px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes gentle-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.floating-particle {
+  position: absolute;
+  background-color: #2D1B00;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle 20s ease-in-out infinite;
+}
+
+.particle-slow {
+  animation: floatParticle 25s ease-in-out infinite;
+}
+
+.particle-medium {
+  animation: floatParticle 20s ease-in-out infinite;
+}
+
+.particle-fast {
+  animation: floatParticle 15s ease-in-out infinite;
+}
+
+.gentle-gradient {
+  background: linear-gradient(
+    -45deg,
+    #EDDABE,
+    #E5C7A3,
+    #F2E2CC,
+    #DCC197,
+    #EDDABE
+  );
+  background-size: 300% 300%;
+  animation: gentle-gradient 8s ease infinite, pulse 4s ease-in-out infinite;
+}
+
+.gentle-gradient-overlay {
+  background: linear-gradient(
+    45deg,
+    transparent,
+    #E5C7A3,
+    transparent
+  );
+  background-size: 200% 200%;
+  animation: gentle-gradient 6s ease infinite;
+}
+
+.radial-overlay {
+  background: radial-gradient(
+    circle at center,
+    transparent,
+    #DCC197,
+    transparent
+  );
+  opacity: 0.5;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes gentleRock {
+  0% {
+    transform: rotate(-2deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-5px);
+  }
+  100% {
+    transform: rotate(-2deg) translateY(0px);
+  }
+}
+
+.rocking-logo {
+  animation: gentleRock 6s ease-in-out infinite;
+  transform-origin: center center;
 }

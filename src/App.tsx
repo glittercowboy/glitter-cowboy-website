@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PageTransition from './components/PageTransition';
+import LandingPage from './components/LandingPage';
+import AboutPage from './components/AboutPage';
+import LabelPage from './components/LabelPage';
+import SchoolPage from './components/SchoolPage';
+import MerchPage from './components/MerchPage';
+import AudioPlayer from './components/AudioPlayer';
+import { AudioProvider } from './contexts/AudioContext';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AudioProvider>
+      <Router>
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/label" element={<LabelPage />} />
+            <Route path="/school" element={<SchoolPage />} />
+            <Route path="/merch" element={<MerchPage />} />
+          </Routes>
+        </PageTransition>
+        <AudioPlayer />
+      </Router>
+    </AudioProvider>
   );
-}
+};
 
 export default App;
