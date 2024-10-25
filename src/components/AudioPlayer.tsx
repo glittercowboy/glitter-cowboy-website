@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useAudio } from '../contexts/AudioContext';
+import { useAudio } from './AudioContext';
 import { Play, Pause } from 'lucide-react';
 
 const formatTime = (seconds: number) => {

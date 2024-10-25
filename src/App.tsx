@@ -7,7 +7,7 @@ import LabelPage from './components/LabelPage';
 import SchoolPage from './components/SchoolPage';
 import MerchPage from './components/MerchPage';
 import AudioPlayer from './components/AudioPlayer';
-import { AudioProvider } from './contexts/AudioContext';
+import { AudioProvider } from './components/AudioContext';
 
 const App: React.FC = () => {
   return (
