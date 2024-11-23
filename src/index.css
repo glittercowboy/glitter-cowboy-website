@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: 'Ocotillo';
+  src: url('./assets/fonts/Ocotillo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Yucca';
   src: url('./assets/fonts/Yucca.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .font-yucca {
