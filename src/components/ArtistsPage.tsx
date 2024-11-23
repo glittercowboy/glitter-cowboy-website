@@ -10,17 +10,17 @@ interface Artist {
 const artists: Artist[] = [
   {
     name: "TÂCHES",
-    image: "/artists/taches.jpg",
+    image: "https://storage.googleapis.com/glitter-cowboy-website-assets/Artist%20Photos%20Folder/taches.jpg",
     bio: "TÂCHES is a producer and DJ known for creating deep, emotive electronic music that blends organic and synthetic elements. With releases on labels like All Day I Dream and Sol Selectas, TÂCHES crafts sonic landscapes that transport listeners to dreamy, ethereal spaces."
   },
   {
     name: "JACKSON ENGLUND",
-    image: "/artists/jackson-englund.jpg",
+    image: "https://storage.googleapis.com/glitter-cowboy-website-assets/Artist%20Photos%20Folder/jackson-englund.jpg",
     bio: "Jackson Englund is an electronic music producer and multi-instrumentalist whose sound bridges the gap between organic house and melodic techno. His productions feature intricate sound design and emotionally charged arrangements that create immersive musical experiences."
   },
   {
     name: "EVAN HATFIELD",
-    image: "/artists/evan-hatfield.jpg",
+    image: "https://storage.googleapis.com/glitter-cowboy-website-assets/Artist%20Photos%20Folder/evan-hatfield.jpg",
     bio: "EVAN HATFIELD creates captivating electronic music that seamlessly blends melodic elements with driving rhythms. His unique approach to production combines innovative sound design with emotive arrangements, resulting in tracks that resonate deeply with listeners."
   }
 ];
