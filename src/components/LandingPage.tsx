@@ -45,7 +45,7 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* Brand name and Tagline */}
-          <h1 className="text-5xl font-bold tracking-widest text-[#2D1B00] mb-4">
+          <h1 className="text-5xl font-yucca tracking-widest text-[#2D1B00] mb-4">
             GLITTER COWBOY
           </h1>
           <p className="text-2xl font-light tracking-widest text-[#2D1B00] opacity-80">
