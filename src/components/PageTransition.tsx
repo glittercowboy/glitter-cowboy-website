@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import HeaderNav from './HeaderNav';
 
 interface PageTransitionProps {
@@ -7,8 +6,6 @@ interface PageTransitionProps {
 }
 
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
-  const location = useLocation();
-
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-[#EDDABE]">
       {/* Base background layers that persist during transitions */}

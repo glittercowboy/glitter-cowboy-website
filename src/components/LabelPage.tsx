@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useAudio } from './AudioContext';
-import { Track, Release } from '../types';
+import { Release } from '../types';
 import { fetchTracks } from '../utils/fetchTracks';
 
 const SkeletonLoader: React.FC = () => {
@@ -24,12 +24,7 @@ const LabelPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { playTrack, setAllReleases } = useAudio();
 
-  useEffect(() => {
-    loadReleases();
-    setIsVisible(true);
-  }, []);
-
-  const loadReleases = async () => {
+  const loadReleases = useCallback(async () => {
     try {
       setIsLoading(true);
       setError(null);
@@ -49,7 +44,12 @@ const LabelPage: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [setAllReleases]);
+
+  useEffect(() => {
+    loadReleases();
+    setIsVisible(true);
+  }, [loadReleases]);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
