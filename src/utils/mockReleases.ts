@@ -15,21 +15,24 @@ export const mockReleases: Release[] = [
                 title: "Midnight Drive",
                 artist: "Desert Rose",
                 trackUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-                trackNumber: 1
+                trackNumber: 1,
+                releaseId: "GC001"
             },
             {
                 id: "GC001-2",
                 title: "Neon Dreams",
                 artist: "Desert Rose",
                 trackUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-                trackNumber: 2
+                trackNumber: 2,
+                releaseId: "GC001"
             },
             {
                 id: "GC001-3",
                 title: "Desert Wind",
                 artist: "Desert Rose",
                 trackUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-                trackNumber: 3
+                trackNumber: 3,
+                releaseId: "GC001"
             }
         ]
     },
@@ -47,7 +50,8 @@ export const mockReleases: Release[] = [
                 title: "Moonlight",
                 artist: "Silver Echo",
                 trackUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-                trackNumber: 1
+                trackNumber: 1,
+                releaseId: "GC002"
             }
         ]
     }
