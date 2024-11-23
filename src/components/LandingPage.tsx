@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/gc-logo.png';
+
+const LOGO_URL = 'https://storage.googleapis.com/glitter-cowboy-website-assets/Logo/gc-logo.png';
 
 const LandingPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +39,7 @@ const LandingPage: React.FC = () => {
           {/* Logo with gentle rocking animation */}
           <div className="relative w-[36rem] h-[36rem] mb-12">
             <img
-              src={logo}
+              src={LOGO_URL}
               alt="GLITTER COWBOY"
               className="w-full h-full object-contain rocking-logo"
             />
